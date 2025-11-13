@@ -1,5 +1,5 @@
 ---
-description: 'Description of the custom chat mode.'
+description: AI Product Owner assistant that helps define, refine, and plan software product ideas through structured conversation and systematic documentation
 tools: ['edit', 'search', 'github/github-mcp-server/add_sub_issue', 'github/github-mcp-server/create_issue', 'github/github-mcp-server/get_file_contents', 'github/github-mcp-server/get_issue', 'github/github-mcp-server/list_issue_types', 'github/github-mcp-server/list_issues', 'github/github-mcp-server/list_label', 'github/github-mcp-server/list_sub_issues', 'github/github-mcp-server/remove_sub_issue', 'github/github-mcp-server/search_issues', 'github/github-mcp-server/search_users', 'github/github-mcp-server/update_issue', 'github/issue_read', 'github/issue_write', 'github/list_issue_types', 'github/list_issues', 'github/search_code', 'github/search_issues', 'github/sub_issue_write', 'todos']
 ---
 

@@ -1,6 +1,12 @@
 # Getting Started with AI Product Owner Tool
 
-Welcome! This tool transforms GitHub Copilot into your AI Product Owner assistant, helping you take ideas from concept to structured, documented product plans.
+Welcome! This tool transforms GitHub Copilot into your AI Product Owner assistant by providing a **ProductOwner chat mode**, helping you take ideas from concept to structured, documented product plans.
+
+## Prerequisites
+
+- **VS Code** with **GitHub Copilot** extension installed and activated
+- Access to **GitHub Copilot Chat**
+- Copy the `ProductOwner.chatmode.md` file into your repository under `.github/chatmodes/` folder
 
 ## What This Tool Does
 
@@ -14,18 +20,27 @@ The AI Product Owner Tool helps you:
 
 ## Quick Start
 
-### 1. Present Your Idea
+### Step 0: Activate ProductOwner Chat Mode
 
-Simply start a conversation with GitHub Copilot about your product idea. You can be as brief or detailed as you like:
+Before you begin, **switch to the ProductOwner chat mode** in GitHub Copilot Chat:
+
+1. **Open GitHub Copilot Chat** in VS Code
+2. **Click the chat mode selector** at the top of the chat panel (it may show "Agent" or another mode)
+3. **Select "ProductOwner"** from the dropdown list of available chat modes
+4. **Verify the mode** - You should see "ProductOwner" displayed as the active mode
+
+### Step 1: Present Your Idea
+
+With the ProductOwner chat mode active, start a conversation about your product idea. You can be as brief or detailed as you like:
 
 **Examples:**
 - "I want to build a task management app"
 - "I have an idea for a fitness tracking platform"
 - "I'm thinking about creating a tool to help developers with code reviews"
 
-### 2. Answer the Discovery Questions
+### Step 2: Answer the Discovery Questions
 
-Copilot will ask you clarifying questions to understand your idea better. These questions will cover:
+The AI Product Owner will ask you clarifying questions to understand your idea better. These questions will cover:
 
 - **Problem & Solution**: What problem are you solving?
 - **Target Users**: Who will use this product?
@@ -34,11 +49,13 @@ Copilot will ask you clarifying questions to understand your idea better. These 
 - **Technical Constraints**: Any specific requirements or limitations?
 - **Timeline & Priority**: When do you need this?
 
+If you don't know or are undecided, tell it. It will help you either plan spikes to investigate the unknowns or create other appropriate plans to accommodate.
+
 **Important:** All questions and your answers are automatically saved to `docs/discovery/questions-and-answers.md`
 
-### 3. Review the Development Plan
+### Step 3: Review the Development Plan
 
-After gathering information, Copilot will create a comprehensive plan including:
+After gathering information, the AI Product Owner will create a comprehensive plan including:
 
 - Project overview and objectives
 - Recommended technical architecture
@@ -49,9 +66,9 @@ After gathering information, Copilot will create a comprehensive plan including:
 
 This plan is saved to `docs/planning/development-plan.md`
 
-### 4. Explore Epics and Features
+### Step 4: Explore Epics and Features
 
-Copilot will break down your project into:
+The AI Product Owner will break down your project into:
 
 - **Epics** (major themes of work): `docs/epics/01-epic-name.md`, `02-epic-name.md`, etc.
 - **Features** (specific capabilities): `docs/features/01-feature-name.md`, `02-feature-name.md`, etc.
@@ -59,6 +76,14 @@ Copilot will break down your project into:
 Each document includes user stories, acceptance criteria, technical details, and dependencies.
 
 ## How to Get the Best Results
+
+### 🎯 Ensure You're in ProductOwner Mode
+
+Before starting any conversation, **verify that ProductOwner mode is active**:
+
+- Look at the chat mode indicator at the top of Copilot Chat
+- It should display **"ProductOwner"** 
+- If not, click the mode selector and choose **ProductOwner** from the list
 
 ### 💡 Effective Prompts
 
@@ -75,7 +100,7 @@ Each document includes user stories, acceptance criteria, technical details, and
 ```
 
 **What happens next:**
-- Copilot immediately starts asking clarifying questions
+- The ProductOwner immediately starts asking clarifying questions
 - Your conversation is documented automatically
 - A structured plan emerges from your discussion
 
@@ -84,21 +109,21 @@ Each document includes user stories, acceptance criteria, technical details, and
 **Be conversational and honest:**
 - Answer questions thoroughly but naturally
 - Say "I'm not sure" if you don't know something
-- Ask Copilot to explain if a question is unclear
-- Let Copilot guide you through the exploration
+- Ask the ProductOwner to explain if a question is unclear
+- Let the ProductOwner guide you through the exploration
 
 **Example conversation:**
 
 ```
 You: "I want to build a task management app"
 
-Copilot: "Great! Let me understand your idea better. What specific 
+ProductOwner: "Great! Let me understand your idea better. What specific 
 problem with existing task management tools are you trying to solve?"
 
 You: "Most task apps are too complex. I want something simple that just 
 focuses on daily priorities"
 
-Copilot: [Saves your answer] "That's helpful! Who is your target user?"
+ProductOwner: [Saves your answer] "That's helpful! Who is your target user?"
 
 You: "Busy professionals who get overwhelmed by feature-heavy apps"
 
@@ -107,7 +132,7 @@ You: "Busy professionals who get overwhelmed by feature-heavy apps"
 
 ### 📝 Reviewing Generated Plans
 
-When Copilot presents plans, epics, or features:
+When the ProductOwner presents plans, epics, or features:
 
 **Provide feedback like:**
 - "Epic 3 seems too large, can we break it down?"
@@ -115,11 +140,11 @@ When Copilot presents plans, epics, or features:
 - "Add a feature for user authentication"
 - "The timeline for Epic 2 seems too aggressive"
 
-Copilot will update the documentation based on your feedback.
+The ProductOwner will update the documentation based on your feedback.
 
 ### 🔄 Iterating on Existing Projects
 
-To continue working on a previous project:
+To continue working on a previous project in ProductOwner mode:
 
 ```
 "Let's continue working on the [project name]"
@@ -131,7 +156,7 @@ To continue working on a previous project:
 "Show me the current development plan"
 ```
 
-Copilot will read existing documentation and continue where you left off.
+The ProductOwner will read existing documentation and continue where you left off.
 
 ## File Structure Overview
 
@@ -164,13 +189,15 @@ docs/
 
 ### Starting a New Project
 
-1. **Introduce your idea** in a single sentence
-2. **Answer discovery questions** - Copilot will ask 5-10 questions
-3. **Review the plan** - Copilot generates a development plan
-4. **Confirm or refine** - Give feedback on the plan
-5. **Explore epics** - Copilot creates epic documents
-6. **Review features** - Copilot breaks epics into features
-7. **Prioritize and adjust** - Reorder or modify as needed
+1. **Copy the chatmode file** to your codebase.
+2. **Switch to ProductOwner chat mode** in Copilot Chat
+3. **Introduce your idea** in a single sentence
+4. **Answer discovery questions** - The ProductOwner will ask 5-10 questions
+5. **Review the plan** - The ProductOwner generates a development plan
+6. **Confirm or refine** - Give feedback on the plan
+7. **Explore epics** - The ProductOwner creates epic documents
+8. **Review features** - The ProductOwner breaks epics into features
+9. **Prioritize and adjust** - Reorder or modify as needed
 
 ### Refining an Existing Idea
 
@@ -239,11 +266,12 @@ Each feature file contains:
 
 ### ✅ Do's
 
+- **Activate ProductOwner mode first** - Always verify you're in the right chat mode
 - **Start simple** - A one-sentence idea is enough to begin
-- **Be responsive** - Answer Copilot's questions thoroughly
+- **Be responsive** - Answer the ProductOwner's questions thoroughly
 - **Ask for clarification** - If something's unclear, speak up
 - **Iterate freely** - Change your mind, refine ideas, explore alternatives
-- **Trust the process** - Let Copilot guide the discovery
+- **Trust the process** - Let the ProductOwner guide the discovery
 - **Review regularly** - Check generated docs and provide feedback
 
 ### ❌ Don'ts
@@ -311,9 +339,17 @@ Copilot: "For MVP, I recommend focusing on Features 1, 2, 3, 5, and 7..."
 
 ## Troubleshooting
 
-### "Copilot isn't asking questions"
+### "I don't see ProductOwner in my chat modes"
 
-Try being more explicit:
+**Solution:**
+1. Ensure this repository is **open in VS Code**
+2. Make sure you have the **latest GitHub Copilot extension** installed
+3. Restart VS Code if needed
+4. The ProductOwner mode is defined in `.github/chatmode/ProductOwner.chatmode.md` and is only available in this workspace
+
+### "The ProductOwner isn't asking questions"
+
+First, **verify you're in ProductOwner chat mode**. Then try being more explicit:
 ```
 "Help me plan this project by asking discovery questions"
 "Let's start the product owner workflow for [idea]"
@@ -348,17 +384,21 @@ All documentation is in the `docs/` folder:
 
 ## Next Steps
 
-Ready to get started? Simply open GitHub Copilot Chat and say:
+Ready to get started? 
+
+1. **Open Copilot Chat** in VS Code
+2. **Switch to ProductOwner mode** (click the mode selector at the top)
+3. **Start your conversation:**
 
 ```
 "I have an idea for [brief description]. Help me plan it out."
 ```
 
-Copilot will take it from there! 🚀
+The ProductOwner will take it from there! 🚀
 
 ---
 
-**Need help?** Just ask Copilot:
+**Need help?** Just ask the ProductOwner:
 - "How does this product owner workflow work?"
 - "Show me an example of how to start"
 - "What questions will you ask me?"

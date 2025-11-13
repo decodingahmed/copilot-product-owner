@@ -15,8 +15,16 @@ This AI Product Owner Tool leverages GitHub Copilot to act as your intelligent p
 
 ## 🚀 Quick Start
 
-### 1. Present Your Idea
-Simply start talking to GitHub Copilot about your product idea:
+### 1. Switch to ProductOwner Chat Mode
+In GitHub Copilot Chat, switch to the **ProductOwner** chat mode to activate the AI Product Owner assistant.
+
+**How to switch:**
+- Click the chat mode selector in Copilot Chat
+- Select **"ProductOwner"** from the available modes
+- The mode indicator will show you're in ProductOwner mode
+
+### 2. Present Your Idea
+Simply start talking to the ProductOwner about your product idea:
 
 ```
 "I want to build a task management app"
@@ -24,8 +32,8 @@ Simply start talking to GitHub Copilot about your product idea:
 "I'm thinking about creating a developer tool"
 ```
 
-### 2. Engage in Discovery
-Copilot will ask clarifying questions covering:
+### 3. Engage in Discovery
+The ProductOwner chat mode will ask clarifying questions covering:
 - **Problem & Solution**: What are you solving?
 - **Target Users**: Who will use this?
 - **Key Features**: What capabilities are needed?
@@ -34,7 +42,7 @@ Copilot will ask clarifying questions covering:
 
 *All Q&A is automatically saved to `docs/discovery/questions-and-answers.md`.*
 
-### 3. Get Your Structured Plan
+### 4. Get Your Structured Plan
 Receive comprehensive documentation including:
 - Development plan with timeline and architecture
 - Organized epics with business value
@@ -59,7 +67,7 @@ docs/
 
 ## 🛠️ How It Works
 
-This tool configures GitHub Copilot through [instructions](.github/copilot-instructions.md) to:
+This tool provides a **ProductOwner chat mode** in GitHub Copilot that is configured through [instructions](.github/copilot-instructions.md) to:
 
 1. **Systematically Ask Questions** - 5-10+ clarifying questions minimum
 2. **Document Everything** - Record all exchanges with timestamps  
@@ -113,18 +121,20 @@ This tool configures GitHub Copilot through [instructions](.github/copilot-instr
 
 1. **Clone this repository**
 2. **Open in VS Code** with GitHub Copilot enabled
-3. **Read the [Getting Started Guide](GETTING_STARTED.md)**
-4. **Start a conversation** about your product idea
-5. **Watch the magic happen** as documentation is generated
+3. **Switch to ProductOwner chat mode** in Copilot Chat
+4. **Read the [Getting Started Guide](GETTING_STARTED.md)**
+5. **Start a conversation** about your product idea
+6. **Watch the magic happen** as documentation is generated
 
 ## 🤝 How to Use
 
-The tool is designed to work seamlessly with GitHub Copilot in VS Code:
+The tool is designed to work seamlessly with GitHub Copilot's **ProductOwner chat mode** in VS Code:
 
-1. Present your product idea to Copilot
-2. Answer the discovery questions thoughtfully  
-3. Review and refine the generated documentation
-4. Use the structured output to guide development
+1. **Switch to ProductOwner chat mode** in Copilot Chat
+2. **Present your product idea** to the ProductOwner
+3. **Answer the discovery questions** thoughtfully  
+4. **Review and refine** the generated documentation
+5. **Use the structured output** to guide development
 
 See [Getting Started](GETTING_STARTED.md) for detailed examples and workflows.
 
